@@ -18,10 +18,10 @@ if conditionTwo {
 }
 print("D")
 ```
--((A))
-- B
-- ((C))
-- ((D))
+((A))
+-B
+((C))
+((D))
 
 B isn't printed because it's dependent on A not being true, which it is. Thus, the computer does not even procede to the next step after A.
 ***
