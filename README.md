@@ -1,14 +1,5 @@
 # Control Flow Lab
 
-## Instructions for lab submission
-
-1. Fork the assignment repo
-1. Clone your Fork to your machine
-1. Complete the lab
-1. Push your changes to your Fork
-1. Submit a Pull Request back to the assignment repo
-1. Paste a link to of your Fork on Canvas and submit
-
 ## Question 1
 
 What will be printed when the code below is run?  Select all that apply.
@@ -27,12 +18,12 @@ if conditionTwo {
 }
 print("D")
 ```
-
-- A
+-((A))
 - B
-- C
-- D
+- ((C))
+- ((D))
 
+B isn't printed because it's dependent on A not being true, which it is. Thus, the computer does not even procede to the next step after A.
 ***
 ## Question 2
 
@@ -51,11 +42,13 @@ switch appInfo {
 ```
 
 - appInfo.0 hasn't released yet
-- myCoolApp hasn't released yet
+- ((myCoolApp hasn't released yet))
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
 - It will give a compile-time error
 
+
+myCoolApp is the only message that will display. This is because the first case (_, 0.0 .. <1.0) is satisfied since the version in the appInfo tuple is given as 0.4. None of the other lines will be printed since the conditions aren't met.
 ***
 ## Question 3
 
@@ -78,8 +71,9 @@ default:
 - A
 - B
 - C
-- D
+- ((D))
 
+The integer 4 is not in the range of 0 and 4 with 4 being unincluded. Therefore, A is out. It is also not in between the range of 5 and 10 so B is out. It is not of the type Double so C is out. This leaves D, which is the default that encompasses all else.
 ***
 ## Question 4
 
@@ -100,9 +94,10 @@ case "snickers":
 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
-- No default case in the switch statement
+- ((No default case in the switch statement))
 - No print statement right outside the switch statement
 
+There is no default case in the switch statement so it is not exhaustive. The other answers aren't relevant.
 ***
 ## Question 5
 
@@ -112,6 +107,18 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 let currentWeather = "rain"
 
 // enter code below
+
+switch currentWeather {
+case "rain":
+    print("It's raining")
+case "snow":
+    print("It's snowing")
+case "sunny":
+    print("It's sunny")
+default:
+    print("It's neither raining, snowy, or sunny")
+}
+
 ```
 
 ***
@@ -124,6 +131,10 @@ let firstName = "John"
 let lastName = "Appleseed"
 
 // enter code below
+
+var fullName = firstName + " " + lastName
+print ("The Fellow's full name is " + fullName)
+
 ```
 
 ***
